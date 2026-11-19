@@ -481,7 +481,7 @@ def main(argv=None) -> int:
         write_json(args.out, {"errors": errors})
         if args.details:
             write_json(args.details, {"findings": details})
-        if args.candidates:
+        if args.candidates is not None and phase2 is not None:
             candidates = phase2["candidates"]
             summary = {"images_total": total, "images_with_candidates": len({c["image"] for c in candidates}),
                        "candidate_groups": len(candidates), "evidence_count": sum(len(c["evidence"]) for c in candidates),
