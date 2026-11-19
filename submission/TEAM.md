@@ -6,3 +6,4 @@
 | Họ và tên | MSHV | Tài khoản GitHub | Phần chính |
 |---|---|---|---|
 | Võ Khắc Xuân Nguyên | 2A202603122 | Nguyenvkx | <<validator luật / đối chiếu / review / bàn giao / truy vết / bảo mật>> |
+| Vũ Việt Anh | 2A202603214 | vanhvuuu2006-bit | <<validator luật / đối chiếu / review / bàn giao / truy vết / bảo mật>> |
