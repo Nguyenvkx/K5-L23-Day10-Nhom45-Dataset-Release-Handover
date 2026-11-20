@@ -1,0 +1,340 @@
+{
+  "schema_version": 1,
+  "note": "Gia thuyet can xem anh. Khong tu dong confirmed.",
+  "thresholds": {
+    "min_segment_pixels": 64,
+    "missing_min_pixels": 128,
+    "missing_min_image_fraction": 0.001,
+    "class_min_iou": 0.6,
+    "class_min_mask_coverage": 0.85,
+    "drift_min_iou": 0.15,
+    "drift_max_mask_coverage": 0.95,
+    "missing_max_mask_coverage": 0.1,
+    "merge_min_part_coverage": 0.18,
+    "merge_min_union_coverage": 0.85,
+    "merge_max_box_iou": 0.4
+  },
+  "summary": {
+    "images_total": 250,
+    "images_with_candidates": 6,
+    "candidate_groups": 6,
+    "evidence_count": 6,
+    "by_type": {
+      "bbox_drift": 1,
+      "class_swap_or_category_swap": 3,
+      "instance_merge": 1,
+      "missing_box": 1
+    },
+    "images_skipped_structural_errors": 8
+  },
+  "skipped": [
+    {
+      "image": "000000000776",
+      "reasons": [
+        "missing_image"
+      ]
+    },
+    {
+      "image": "000000001268",
+      "reasons": [
+        "bbox_out_of_bounds"
+      ]
+    },
+    {
+      "image": "000000006818",
+      "reasons": [
+        "invalid_category_id"
+      ]
+    },
+    {
+      "image": "000000012748",
+      "reasons": [
+        "invalid_category_id"
+      ]
+    },
+    {
+      "image": "000000015079",
+      "reasons": [
+        "invalid_class"
+      ]
+    },
+    {
+      "image": "000000016228",
+      "reasons": [
+        "missing_image"
+      ]
+    },
+    {
+      "image": "000000021167",
+      "reasons": [
+        "duplicate_box"
+      ]
+    },
+    {
+      "image": "000000023126",
+      "reasons": [
+        "thing_overlap"
+      ]
+    }
+  ],
+  "candidates": [
+    {
+      "image": "000000001584",
+      "type": "class_swap_or_category_swap",
+      "possible_types": [
+        "class_swap",
+        "category_swap"
+      ],
+      "status": "needs_review",
+      "evidence": [
+        {
+          "reason": "Vi tri khop nhung ten lop khac; xem anh de chon class_swap HOAC category_swap, hoac rejected.",
+          "detection": [
+            {
+              "line": 14,
+              "class": "bus",
+              "bbox": [
+                502.950168,
+                315.949896,
+                566.1,
+                385.67016000000007
+              ]
+            }
+          ],
+          "panoptic": [
+            {
+              "id": 3156032,
+              "class": "parking meter",
+              "bbox": [
+                503,
+                316,
+                566,
+                386
+              ],
+              "area": 3718
+            }
+          ],
+          "metrics": {
+            "bbox_iou": 0.9922,
+            "mask_coverage": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "image": "000000007784",
+      "type": "class_swap_or_category_swap",
+      "possible_types": [
+        "class_swap",
+        "category_swap"
+      ],
+      "status": "needs_review",
+      "evidence": [
+        {
+          "reason": "Vi tri khop nhung ten lop khac; xem anh de chon class_swap HOAC category_swap, hoac rejected.",
+          "detection": [
+            {
+              "line": 1,
+              "class": "book",
+              "bbox": [
+                93.96,
+                86.1298125,
+                334.37,
+                306.21993749999996
+              ]
+            }
+          ],
+          "panoptic": [
+            {
+              "id": 8881844,
+              "class": "kite",
+              "bbox": [
+                94,
+                86,
+                334,
+                306
+              ],
+              "area": 25243
+            }
+          ],
+          "metrics": {
+            "bbox_iou": 0.9967,
+            "mask_coverage": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "image": "000000009483",
+      "type": "bbox_drift",
+      "possible_types": [
+        "bbox_drift"
+      ],
+      "status": "needs_review",
+      "evidence": [
+        {
+          "reason": "Box cung lop de nhieu pixel segment ra ngoai; can phan biet lech box voi che khuat/cach gan nhan.",
+          "detection": [
+            {
+              "line": 2,
+              "class": "person",
+              "bbox": [
+                62.27584,
+                0.0,
+                223.86176,
+                479.52095999999995
+              ]
+            }
+          ],
+          "panoptic": [
+            {
+              "id": 3022625,
+              "class": "person",
+              "bbox": [
+                36,
+                62,
+                177,
+                480
+              ],
+              "area": 36864
+            }
+          ],
+          "metrics": {
+            "bbox_iou": 0.5411,
+            "mask_coverage": 0.934,
+            "box_area_ratio": 1.3147
+          }
+        }
+      ]
+    },
+    {
+      "image": "000000014831",
+      "type": "missing_box",
+      "possible_types": [
+        "missing_box"
+      ],
+      "status": "needs_review",
+      "evidence": [
+        {
+          "reason": "Segment thing du lon khong co box tuong ung; can xem vat co can gan box khong.",
+          "detection": [],
+          "panoptic": [
+            {
+              "id": 7437960,
+              "class": "bed",
+              "bbox": [
+                0,
+                0,
+                480,
+                269
+              ],
+              "area": 119325
+            }
+          ],
+          "metrics": {
+            "best_same_class_coverage": 0.0,
+            "best_same_class_iou": 0.0,
+            "area_fraction": 0.3884
+          }
+        }
+      ]
+    },
+    {
+      "image": "000000022479",
+      "type": "instance_merge",
+      "possible_types": [
+        "instance_merge"
+      ],
+      "status": "needs_review",
+      "evidence": [
+        {
+          "reason": "Mot segment co pixel rieng trong hai box cung lop; can xem co hai vat hay khong.",
+          "detection": [
+            {
+              "line": 2,
+              "class": "bench",
+              "bbox": [
+                175.32960000000003,
+                435.41002999999995,
+                252.85984,
+                461.12011
+              ]
+            },
+            {
+              "line": 3,
+              "class": "bench",
+              "bbox": [
+                265.93024,
+                434.84011999999996,
+                303.80032,
+                452.35003
+              ]
+            }
+          ],
+          "panoptic": [
+            {
+              "id": 3620924,
+              "class": "bench",
+              "bbox": [
+                175,
+                435,
+                304,
+                461
+              ],
+              "area": 2068
+            }
+          ],
+          "metrics": {
+            "coverage_box_1": 0.7287,
+            "coverage_box_2": 0.2713,
+            "shared_coverage": 0.0,
+            "union_coverage": 1.0
+          }
+        }
+      ]
+    },
+    {
+      "image": "000000025057",
+      "type": "class_swap_or_category_swap",
+      "possible_types": [
+        "class_swap",
+        "category_swap"
+      ],
+      "status": "needs_review",
+      "evidence": [
+        {
+          "reason": "Vi tri khop nhung ten lop khac; xem anh de chon class_swap HOAC category_swap, hoac rejected.",
+          "detection": [
+            {
+              "line": 2,
+              "class": "bottle",
+              "bbox": [
+                332.00032,
+                129.2501245,
+                422.20000000000005,
+                204.0899875
+              ]
+            }
+          ],
+          "panoptic": [
+            {
+              "id": 10661031,
+              "class": "frisbee",
+              "bbox": [
+                332,
+                129,
+                422,
+                204
+              ],
+              "area": 4731
+            }
+          ],
+          "metrics": {
+            "bbox_iou": 0.9933,
+            "mask_coverage": 1.0
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+image,type,verdict,note
+000000001584,category_swap,confirmed,"Ảnh cho thấy một chiếc xe bus; detection ghi đúng, panoptic ghi sai thành parking nên panoptic sai"
+000000007784,class_swap,confirmed,"Ảnh cho thấy một con diều đang bay; panoptic ghi đúng, detection ghi sai thành book nên detection sai"
+000000009483,bbox_drift ,confirmed ,"Box person lệch phải và mở rộng lên phía trên so với mask person"
+000000014831,missing_box,confirmed,"Ảnh cho thấy một cái giường rõ ràng, panoptic có segment bed nhưng detection không có box bed nào"
+000000022479,instance_merge,confirmed,"Ảnh cho thấy hai chiếc ghế tách biệt; detection có hai box riêng nhưng panoptic chỉ có một segment phủ cả hai ghế"
+000000025057,class_swap,confirmed,"Ảnh cho thấy VAT_THAT; panoptic ghi đúng frisbee, detection ghi sai thành bottle nên detection sai"
